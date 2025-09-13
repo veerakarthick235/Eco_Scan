@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Smart Waste Sorting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>EcoScan ♻️</h1>
+        <p>Your AI-powered guide to responsible waste disposal.</p>
+    </header>
+
+    <main>
+        <div class="scanner-card">
+            <h2>Scan Your Item</h2>
+            <p>Upload a picture to let our AI identify and classify it.</p>
+
+            <div class="image-preview-container">
+                <img src="images/placeholder.png" alt="Image preview" id="imagePreview">
+            </div>
+
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <label for="imageUpload" class="upload-button">Upload Image</label>
+        </div>
+
+        <div class="location-card">
+            <p>Location: <strong id="locationDisplay">Unknown</strong> <button id="getLocationBtn">Get Location for Better Results</button></p>
+        </div>
+
+        <div id="resultCard" class="result-card hidden">
+            <h2 id="resultItemName"></h2>
+            <div class="result-content">
+                <p class="result-category" id="resultCategory"></p>
+                <p class="result-instructions" id="resultInstructions"></p>
+                <div class="pro-tip">
+                    <strong>Pro Tip:</strong> <span id="resultTip"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <h2>Your Impact History</h2>
+            <div id="historyStats">
+                <p>♻️ Recycled: <span id="recycledCount">0</span></p>
+                <p>🌿 Composted: <span id="compostedCount">0</span></p>
+            </div>
+            <ul id="historyList">
+                </ul>
+            <button id="clearHistoryBtn">Clear History</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>A Zero Boundaries Hackathon Project.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
